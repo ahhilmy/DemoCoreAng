@@ -1,0 +1,17 @@
+﻿@model DemoCore.ViewModels.PiesListViewModel
+
+<h1>@Model.CurrentCategory</h1>
+
+@foreach (var pie in Model.Pies)
+{
+    <div class="col-sm-4">
+        <div class="thumbnail">
+            <h2>@pie.Name</h2>
+            <h3>@pie.Price.ToString("c")</h3>
+        </div>
+    </div>
+}
+
+@section scripts{
+
+}
